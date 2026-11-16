@@ -1,6 +1,6 @@
 // Configure os dois destinos antes de publicar este pacote.
 const INTEGRA_LINKS = {
-  instalador: 'https://github.com/DaviLadwig/integra_desktop/releases/download/v1.0.1/Integra_0.3.2_x64_en-US.msi', // Exemplo: https://seu-dominio.com/Integra-Setup.exe
+  instalador: 'https://github.com/DaviLadwig/integra_desktop/releases/download/v1.0.2/Integra_0.3.2_x64-setup.exe', // Exemplo: https://seu-dominio.com/Integra-Setup.exe
   whatsapp: '5598981473574' // Somente DDI + DDD + número. Exemplo: 5598999999999
 };
 
