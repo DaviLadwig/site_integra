@@ -4,15 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090f14">
-  <meta name="description"
-    content="Integra SIAPS: indicadores, checklists e relatórios da atenção primária em um aplicativo Windows offline.">
-  <title>Integra SIAPS — Sistema de Produção Isolada | APS</title>
+  <meta name="theme-color" content="#0a4f5c">
+  <meta name="description" content="Integra SIAPS: aplicativo desktop offline para a atenção primária à saúde.">
+  <title>Integra SIAPS | Acesso e Download</title>
   <link rel="icon" href="assets/icone-sistema.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/app.js" defer></script>
@@ -20,296 +19,82 @@
 </head>
 
 <body>
-  <!-- TOPBAR INSTITUCIONAL -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-left">
-        <a href="#inicio" class="brand" aria-label="Integra SIAPS">
-          <img class="brand-light" src="assets/logo-integra-light.png" alt="Integra SIAPS">
-          <img class="brand-dark" src="assets/logo-integra-dark.png" alt="" aria-hidden="true">
-        </a>
-        <span class="divider"></span>
-        <span class="sys-code">MÓDULO APS · WINDOWS x64</span>
-      </div>
-
-      <nav class="topbar-nav" aria-label="Navegação principal">
-        <a href="#especificacoes">Especificações</a>
-        <a href="#operacao">Operação</a>
-        <a href="#modulos">Módulos</a>
-        <a href="#licenciamento">Licenciamento</a>
-      </nav>
-
-      <div class="topbar-right">
-        <button class="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema">
-          <svg class="moon-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-          </svg>
-          <svg class="sun-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <circle cx="12" cy="12" r="5" />
-            <path
-              d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-          </svg>
-        </button>
-        <a href="#licenciamento" class="btn-topbar">Baixar Instalador</a>
+  <!-- CABEÇALHO SIMPLES -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#inicio" class="brand" aria-label="Integra SIAPS — Início">
+        <img src="assets/logo-integra-dark.png" alt="Integra SIAPS">
+      </a>
+      <div class="header-dev">
+        <span>Desenvolvido por</span>
+        <a href="https://www.daviladwig.com.br/" target="_blank" rel="noopener noreferrer">Davi Ladwig ↗</a>
       </div>
     </div>
   </header>
 
-  <main id="inicio">
-    <!-- HERO ASSIMÉTRICO ALINHADO À ESQUERDA -->
-    <section class="hero-clinical">
-      <div class="container hero-grid">
-        <div class="hero-main">
-          <div class="meta-line">SISTEMA DE PRODUÇÃO ISOLADA · AMBIENTE LOCAL OFFLINE</div>
-          <h1>Gestão e leitura de indicadores do SIAPS para a Atenção Primária.</h1>
-          <p>Substitua o cruzamento manual de planilhas extensas por painéis estruturados, listas nominais de busca
-            ativa e verificação objetiva de boas práticas direto no computador da unidade.</p>
+  <!-- SEÇÃO ÚNICA: BOTÕES SOLTOS À ESQUERDA + DESCRIÇÃO TÉCNICA À DIREITA -->
+  <main class="main-content" id="inicio">
+    <section class="container split-hero">
+      <!-- COLUNA ESQUERDA: AÇÕES GRANDES E SOLTAS -->
+      <div class="left-column">
+        <div class="kicker-top">SISTEMA DE PRODUÇÃO ISOLADA · WINDOWS OFFLINE</div>
+        <h1>Integra SIAPS</h1>
+        <p class="subtitle">Indicadores, listas nominais e checklists de boas práticas para a Atenção Primária à Saúde.
+        </p>
 
-          <div class="hero-cta-row">
-            <a href="#licenciamento" class="btn-yellow">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              Baixar para Windows
-            </a>
-            <a href="#operacao" class="btn-petrol">Fluxo de Operação</a>
-          </div>
-        </div>
+        <div class="big-actions">
+          <a class="btn-big download" id="integra-download"
+            href="https://github.com/DaviLadwig/integra_desktop/releases/download/v1.0.4/Integra_1.0.4_x64-setup.exe"
+            aria-describedby="download-note">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <div>
+              <strong>Baixar para Windows</strong>
+              <small id="download-note">Instalador oficial x64 · Windows 10 e 11</small>
+            </div>
+          </a>
 
-        <!-- FICHA TÉCNICA LATERAL -->
-        <aside class="spec-panel" aria-label="Ficha técnica do software">
-          <div class="spec-panel-header">FICHA TÉCNICA DO SISTEMA</div>
-          <dl class="spec-list">
+          <a class="btn-big whatsapp" id="integra-whatsapp" href="#support-note" aria-describedby="support-note">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
+              <path
+                d="M16.01 2.64A13.36 13.36 0 0 0 4.47 22.73L2.67 29.3l6.73-1.77a13.36 13.36 0 1 0 6.61-24.89Zm0 24.28a10.9 10.9 0 0 1-5.56-1.52l-.4-.23-3.99 1.05 1.06-3.88-.26-.4A10.9 10.9 0 1 1 16 26.92Zm5.98-8.13c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.75.17-.22.33-.86 1.08-1.05 1.3-.2.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.65-1.97-1.84-2.3-.2-.33-.02-.51.15-.67.15-.15.33-.39.5-.58.16-.19.22-.33.33-.55.11-.22.06-.42-.03-.58-.08-.17-.75-1.8-1.03-2.47-.27-.65-.55-.56-.75-.57l-.64-.01c-.22 0-.58.08-.89.42-.3.33-1.16 1.13-1.16 2.76s1.19 3.2 1.35 3.42c.17.22 2.34 3.57 5.67 5.01.8.35 1.42.56 1.91.72.8.25 1.53.22 2.1.14.64-.1 1.96-.8 2.23-1.58.28-.77.28-1.44.2-1.58-.08-.14-.3-.22-.63-.39Z" />
+            </svg>
             <div>
-              <dt>ENTRADA DE DADOS</dt>
-              <dd>Planilhas Excel (.xlsx) exportadas do SIAPS</dd>
+              <strong>Falar no WhatsApp</strong>
+              <small id="support-note">Suporte e solicitação de licença anual</small>
             </div>
-            <div>
-              <dt>ARQUITETURA</dt>
-              <dd>Aplicação Desktop Nativa (Windows 10 / 11)</dd>
-            </div>
-            <div>
-              <dt>CONECTIVIDADE</dt>
-              <dd>100% Offline — Processamento local</dd>
-            </div>
-            <div>
-              <dt>LINHAS DE CUIDADO</dt>
-              <dd>Gestantes, Crianças, Hipertensão, Diabetes, Mulher e Idosos</dd>
-            </div>
-            <div>
-              <dt>SAÍDA</dt>
-              <dd>Checklists nominais, BI por equipe e impressão</dd>
-            </div>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <!-- FAIXA DE DADOS / CONTEXTO -->
-    <section class="section-bordered" id="especificacoes">
-      <div class="container split-layout">
-        <div class="col-text">
-          <div class="section-index">01 / OBJETIVO OPERACIONAL</div>
-          <h2>Dados assistenciais organizados para a tomada de decisão.</h2>
-          <p>O <strong>Integra SIAPS</strong> foi projetado para eliminar o gargalo administrativo das equipes de
-            Estratégia Saúde da Família e gestores municipais.</p>
-          <p>Ao importar o relatório bruto do SIAPS, o software estrutura automaticamente os registros por equipe e
-            microárea, destacando pendências assistenciais e critérios de boas práticas sem expor dados sensíveis na
-            nuvem.</p>
-
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Rotina Anterior (Excel)</th>
-                <th>Com o Integra SIAPS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Filtros manuais em milhares de linhas</td>
-                <td>Segmentação imediata por equipe e grupo</td>
-              </tr>
-              <tr>
-                <td>Conferência visual de critérios</td>
-                <td>Checklist nominal automatizado</td>
-              </tr>
-              <tr>
-                <td>Formatação demorada para reuniões</td>
-                <td>Relatórios prontos para impressão</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="col-media">
-          <figure class="clinical-frame">
-            <img src="assets/atencao-primaria-saude.jpg" alt="Atendimento médico na Atenção Primária à Saúde"
-              loading="lazy">
-            <figcaption>
-              <span>ATENÇÃO PRIMÁRIA À SAÚDE</span>
-              <span>Suporte direto à coordenação e equipes de campo</span>
-            </figcaption>
-          </figure>
+          </a>
         </div>
       </div>
-    </section>
 
-    <!-- FLUXO DE OPERAÇÃO -->
-    <section class="section-bordered bg-panel" id="operacao">
-      <div class="container">
-        <div class="section-title-block">
-          <div class="section-index">02 / FLUXO DE OPERAÇÃO</div>
-          <h2>Três etapas entre o arquivo bruto e a busca ativa.</h2>
-        </div>
+      <!-- COLUNA DIREITA: DESCRIÇÃO E PASSOS DE ATIVAÇÃO -->
+      <div class="right-column">
+        <div class="section-index">LICENCIAMENTO E INSTALAÇÃO</div>
+        <h2>Ativação individual por estação de trabalho.</h2>
+        <p>O Integra SIAPS opera sob licença anual válida por <strong>12 meses</strong>, sem renovação automática ou
+          cobranças recorrentes. A liberação do software é realizada mediante arquivo de credencial
+          <code>.integra</code> vinculado à sua solicitação.</p>
 
-        <div class="process-grid">
-          <div class="process-cell">
-            <div class="process-num">ETAPA 01</div>
-            <h3>Importação do Relatório SIAPS</h3>
-            <p>Carregue a planilha em Excel extraída do sistema oficial diretamente na interface local do Integra.</p>
-          </div>
-          <div class="process-cell">
-            <div class="process-num">ETAPA 02</div>
-            <h3>Processamento e Filtragem</h3>
-            <p>O motor local classifica os cidadãos por linha de cuidado, equipe vinculada e situação dos indicadores.
-            </p>
-          </div>
-          <div class="process-cell">
-            <div class="process-num">ETAPA 03</div>
-            <h3>Monitoramento e Impressão</h3>
-            <p>Emita listas nominais limpas para orientar os Agentes Comunitários de Saúde e registrar o acompanhamento.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MÓDULOS DO SISTEMA -->
-    <section class="section-bordered" id="modulos">
-      <div class="container">
-        <div class="section-title-block">
-          <div class="section-index">03 / MÓDULOS E RECURSOS</div>
-          <h2>Estrutura construída para a rotina da unidade.</h2>
-        </div>
-
-        <div class="modules-table-grid">
-          <div class="module-item">
-            <span class="mod-code">MOD-01</span>
-            <h3>Acompanhamento por Grupos</h3>
-            <p>Visões dedicadas para crianças, gestantes, saúde da mulher, pessoas com hipertensão, diabetes e população
-              idosa.</p>
-          </div>
-          <div class="module-item">
-            <span class="mod-code">MOD-02</span>
-            <h3>Checklist de Boas Práticas</h3>
-            <p>Consulta nominal detalhada com verificação objetiva dos critérios exigidos para cada acompanhamento
-              assistencial.</p>
-          </div>
-          <div class="module-item">
-            <span class="mod-code">MOD-03</span>
-            <h3>BI Gerencial e Relatórios</h3>
-            <p>Painéis consolidados com filtro por equipe de saúde, prontos para exportação e impressão em formato
-              administrativo.</p>
-          </div>
-          <div class="module-item">
-            <span class="mod-code">MOD-04</span>
-            <h3>Operação Isolada e Offline</h3>
-            <p>Instalação local no Windows sem dependência de internet contínua, mantendo a base de dados sob controle
-              exclusivo da máquina.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LICENCIAMENTO E DOWNLOAD -->
-    <section class="licensing-section" id="licenciamento">
-      <div class="container licensing-grid">
-        <div class="licensing-details">
-          <div class="section-index yellow">04 / LICENCIAMENTO E INSTALAÇÃO</div>
-          <h2>Ativação individual por estação de trabalho.</h2>
-          <p>O Integra SIAPS opera sob licença anual válida por <strong>12 meses</strong>, sem renovação automática ou
-            cobranças recorrentes. A liberação do software é realizada mediante arquivo de credencial
-            <code>.integra</code> vinculado à sua solicitação.</p>
-
-          <ol class="protocol-list">
-            <li>
-              <span class="step-tag">PASSO 01</span>
-              <span>Faça o download e execute o instalador oficial no Windows.</span>
-            </li>
-            <li>
-              <span class="step-tag">PASSO 02</span>
-              <span>Entre em contato pelo WhatsApp para solicitar sua licença anual.</span>
-            </li>
-            <li>
-              <span class="step-tag">PASSO 03</span>
-              <span>Importe o arquivo <code>.integra</code> recebido para liberar o acesso completo.</span>
-            </li>
-          </ol>
-        </div>
-
-        <div class="terminal-box">
-          <div class="terminal-header">
-            <img src="assets/icone-sistema.png" alt="Ícone Integra SIAPS">
-            <div>
-              <strong>INTEGRA SIAPS DESKTOP</strong>
-              <span>Licença Anual · 12 Meses</span>
-            </div>
-          </div>
-
-          <div class="terminal-price">
-            <span class="price-label">INVESTIMENTO ANUAL</span>
-            <div class="price-value">R$ XXX,XX</div>
-            <span class="price-note">Pagamento único via Pix · Sem renovação automática</span>
-          </div>
-
-          <div class="terminal-actions">
-            <a class="btn-download-main" id="integra-download"
-              href="'https://github.com/DaviLadwig/integra_desktop/releases/download/v1.0.2/Integra_0.3.2_x64-setup.exe"
-              aria-describedby="download-note">
-              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              Baixar Instalador Windows (.exe)
-            </a>
-            <span class="action-caption" id="download-note" role="status">Versão x64 · Compatível com Windows 10 e
-              11</span>
-
-            <a class="btn-whatsapp-main" id="integra-whatsapp" href="#support-note" aria-describedby="support-note">
-              <svg viewBox="0 0 32 32" width="19" height="19" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M16.01 2.64A13.36 13.36 0 0 0 4.47 22.73L2.67 29.3l6.73-1.77a13.36 13.36 0 1 0 6.61-24.89Zm0 24.28a10.9 10.9 0 0 1-5.56-1.52l-.4-.23-3.99 1.05 1.06-3.88-.26-.4A10.9 10.9 0 1 1 16 26.92Zm5.98-8.13c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.75.17-.22.33-.86 1.08-1.05 1.3-.2.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.65-1.97-1.84-2.3-.2-.33-.02-.51.15-.67.15-.15.33-.39.5-.58.16-.19.22-.33.33-.55.11-.22.06-.42-.03-.58-.08-.17-.75-1.8-1.03-2.47-.27-.65-.55-.56-.75-.57l-.64-.01c-.22 0-.58.08-.89.42-.3.33-1.16 1.13-1.16 2.76s1.19 3.2 1.35 3.42c.17.22 2.34 3.57 5.67 5.01.8.35 1.42.56 1.91.72.8.25 1.53.22 2.1.14.64-.1 1.96-.8 2.23-1.58.28-.77.28-1.44.2-1.58-.08-.14-.3-.22-.63-.39Z" />
-              </svg>
-              Solicitar Licença pelo WhatsApp
-            </a>
-            <span class="action-caption" id="support-note" role="status">Suporte e liberação direta com o
-              responsável</span>
-          </div>
-        </div>
+        <ol class="protocol-list">
+          <li>
+            <span class="step-tag">PASSO 01</span>
+            <span>Faça o download e execute o instalador oficial no Windows.</span>
+          </li>
+          <li>
+            <span class="step-tag">PASSO 02</span>
+            <span>Entre em contato pelo WhatsApp para solicitar sua licença anual.</span>
+          </li>
+          <li>
+            <span class="step-tag">PASSO 03</span>
+            <span>Importe o arquivo <code>.integra</code> recebido para liberar o acesso completo.</span>
+          </li>
+        </ol>
       </div>
     </section>
   </main>
-
-  <!-- FOOTER TÉCNICO -->
-  <footer class="footer-clinical">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img class="brand-light" src="assets/logo-integra-light.png" alt="Integra SIAPS">
-        <img class="brand-dark" src="assets/logo-integra-dark.png" alt="" aria-hidden="true">
-        <p>Sistema de produção isolada para acompanhamento e gestão da Atenção Primária à Saúde.</p>
-      </div>
-      <div class="footer-meta">
-        <span>© 2026 Integra SIAPS · Ambiente Local Windows</span>
-        <span>Desenvolvido por <a href="https://www.daviladwig.com.br/" target="_blank" rel="noopener noreferrer">Davi
-            Ladwig | Dev ↗</a></span>
-      </div>
-    </div>
-  </footer>
 </body>
 
 </html>
